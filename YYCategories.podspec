@@ -11,8 +11,8 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://github.com/ibireme/YYCategories.git', :tag => s.version.to_s }
   
   s.requires_arc = true
-  s.source_files = 'YYCategories'
-  s.public_header_files = 'YYCategories'
+  s.source_files = 'YYCategories/**/*.{h,m}'
+  s.public_header_files = 'YYCategories/**/*.{h}'
   
   non_arc_files = 'YYCategories/Foundation/NSObject+YYAddForARC.{h,m}', 'YYCategories/Foundation/NSThread+YYAdd.{h,m}'
   s.ios.exclude_files = non_arc_files
