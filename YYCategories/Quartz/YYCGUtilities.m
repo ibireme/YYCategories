@@ -1,6 +1,6 @@
 //
 //  YYCGUtilities.m
-//  YYKit <https://github.com/ibireme/YYKit>
+//  YYCategories <https://github.com/ibireme/YYCategories>
 //
 //  Created by ibireme on 15/2/28.
 //  Copyright (c) 2015 ibireme.

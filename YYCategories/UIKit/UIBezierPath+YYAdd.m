@@ -1,6 +1,6 @@
 //
 //  UIBezierPath+YYAdd.m
-//  YYKit <https://github.com/ibireme/YYKit>
+//  YYCategories <https://github.com/ibireme/YYCategories>
 //
 //  Created by ibireme on 14/10/30.
 //  Copyright (c) 2015 ibireme.

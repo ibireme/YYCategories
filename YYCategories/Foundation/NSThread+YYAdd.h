@@ -1,6 +1,6 @@
 //
 //  NSThread+YYAdd.h
-//  YYKit <https://github.com/ibireme/YYKit>
+//  YYCategories <https://github.com/ibireme/YYCategories>
 //
 //  Created by ibireme on 15/7/3.
 //  Copyright (c) 2015 ibireme.

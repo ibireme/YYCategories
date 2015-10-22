@@ -1,6 +1,6 @@
 //
 //  UIScrollView+YYAdd.m
-//  YYKit <https://github.com/ibireme/YYKit>
+//  YYCategories <https://github.com/ibireme/YYCategories>
 //
 //  Created by ibireme on 13/4/5.
 //  Copyright (c) 2015 ibireme.

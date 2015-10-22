@@ -1,6 +1,6 @@
 //
 //  CALayer+YYAdd.m
-//  YYKit <https://github.com/ibireme/YYKit>
+//  YYCategories <https://github.com/ibireme/YYCategories>
 //
 //  Created by ibireme on 14/5/10.
 //  Copyright (c) 2015 ibireme.

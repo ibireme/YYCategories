@@ -1,6 +1,6 @@
 //
 //  NSObject+YYAdd.m
-//  YYKit <https://github.com/ibireme/YYKit>
+//  YYCategories <https://github.com/ibireme/YYCategories>
 //
 //  Created by ibireme on 14/10/8.
 //  Copyright (c) 2015 ibireme.
@@ -306,7 +306,7 @@ else if (size <= 4 * _size_ ) { \
                  */
                 struct dummy {char tmp;};
                 for (int i = 0; i < size; i++) va_arg(args, struct dummy);
-                NSLog(@"YYKit performSelectorWithArgs unsupported type:%s (%lu bytes)",
+                NSLog(@"YYCategories performSelectorWithArgs unsupported type:%s (%lu bytes)",
                       [sig getArgumentTypeAtIndex:index],(unsigned long)size);
             }
 #undef case_size
