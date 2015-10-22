@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.source_files = 'YYCategories'
   s.public_header_files = 'YYCategories'
   
-  non_arc_files = 'YYCategories/NSObject+YYAddForARC.{h,m}', 'YYCategories/NSThread+YYAdd.{h,m}'
+  non_arc_files = 'YYCategories/Foundation/NSObject+YYAddForARC.{h,m}', 'YYCategories/Foundation/NSThread+YYAdd.{h,m}'
   s.ios.exclude_files = non_arc_files
   s.subspec 'no-arc' do |sna|
     sna.requires_arc = false

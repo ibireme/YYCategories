@@ -14,6 +14,7 @@
 #if __has_include(<YYCategories/YYCategories.h>)
 FOUNDATION_EXPORT double YYCategoriesVersionNumber;
 FOUNDATION_EXPORT const unsigned char YYCategoriesVersionString[];
+#import <YYCategories/YYCategoriesMacro.h>
 #import <YYCategories/NSObject+YYAdd.h>
 #import <YYCategories/NSObject+YYAddForKVO.h>
 #import <YYCategories/NSObject+YYAddForARC.h>
@@ -45,6 +46,7 @@ FOUNDATION_EXPORT const unsigned char YYCategoriesVersionString[];
 #import <YYCategories/CALayer+YYAdd.h>
 #import <YYCategories/YYCGUtilities.h>
 #else
+#import "YYCategoriesMacro.h"
 #import "NSObject+YYAdd.h"
 #import "NSObject+YYAddForKVO.h"
 #import "NSObject+YYAddForARC.h"
