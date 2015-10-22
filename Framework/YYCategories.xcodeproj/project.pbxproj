@@ -627,6 +627,7 @@
 				D91525CF1BD91FDF00EE6881 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D946DE441BD142CD006B77F7 /* Build configuration list for PBXProject "YYCategories" */ = {
 			isa = XCConfigurationList;

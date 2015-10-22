@@ -96,36 +96,42 @@ YYSYNTH_DUMMY_CLASS(NSString_YYAdd)
 }
 
 - (NSString *)stringByURLEncode {
-    return [self stringByURLEncode:NSUTF8StringEncoding];
+    if ([self respondsToSelector:@selector(stringByAddingPercentEncodingWithAllowedCharacters:)]) {
+        return [self stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    } else {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        CFStringEncoding cfEncoding = CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding);
+        NSString *encoded = (__bridge_transfer NSString *)
+        CFURLCreateStringByAddingPercentEscapes(
+                                                kCFAllocatorDefault,
+                                                (__bridge CFStringRef)self,
+                                                NULL,
+                                                CFSTR("!#$&'()*+,/:;=?@[]"),
+                                                cfEncoding);
+        return encoded;
+#pragma clang diagnostic pop
+    }
 }
 
 - (NSString *)stringByURLDecode {
-    return [self stringByURLDecode:NSUTF8StringEncoding];
-}
-
-- (NSString *)stringByURLEncode:(NSStringEncoding)encoding {
-    CFStringEncoding cfEncoding = CFStringConvertNSStringEncodingToEncoding(encoding);
-    NSString *encoded = (__bridge_transfer NSString *)
-    CFURLCreateStringByAddingPercentEscapes(
-                                            kCFAllocatorDefault,
-                                            (__bridge CFStringRef)self,
-                                            NULL,
-                                            CFSTR("!#$&'()*+,/:;=?@[]"),
-                                            cfEncoding);
-    return encoded;
-}
-
-- (NSString *)stringByURLDecode:(NSStringEncoding)encoding {
-    CFStringEncoding en = CFStringConvertNSStringEncodingToEncoding(encoding);
-    NSString *decoded = [self stringByReplacingOccurrencesOfString:@"+"
-                                                        withString:@" "];
-    decoded = (__bridge_transfer NSString *)
-    CFURLCreateStringByReplacingPercentEscapesUsingEncoding(
-                                                            NULL,
-                                                            (__bridge CFStringRef)decoded,
-                                                            CFSTR(""),
-                                                            en);
-    return decoded;
+    if ([self respondsToSelector:@selector(stringByRemovingPercentEncoding)]) {
+        return [self stringByRemovingPercentEncoding];
+    } else {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        CFStringEncoding en = CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding);
+        NSString *decoded = [self stringByReplacingOccurrencesOfString:@"+"
+                                                            withString:@" "];
+        decoded = (__bridge_transfer NSString *)
+        CFURLCreateStringByReplacingPercentEscapesUsingEncoding(
+                                                                NULL,
+                                                                (__bridge CFStringRef)decoded,
+                                                                CFSTR(""),
+                                                                en);
+        return decoded;
+#pragma clang diagnostic pop
+    }
 }
 
 - (NSString *)stringByEscapingHTML {

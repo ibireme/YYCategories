@@ -132,20 +132,6 @@
 - (NSString *)stringByURLDecode;
 
 /**
- URL encode a string.
- @param encoding  The encoding to use.
- @return URL encoded string
- */
-- (NSString *)stringByURLEncode:(NSStringEncoding)encoding;
-
-/**
- URL encode a string.
- @param encoding  The encoding to use.
- @return URL encoded string
- */
-- (NSString *)stringByURLDecode:(NSStringEncoding)encoding;
-
-/**
  Escape commmon HTML to Entity.
  Example: "a<b" will be escape to "a&lt;b".
  */

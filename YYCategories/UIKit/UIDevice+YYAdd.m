@@ -130,25 +130,6 @@ YYSYNTH_DUMMY_CLASS(UIDevice_YYAdd)
     return address;
 }
 
-- (NSString *)ipAddressExternal {
-    NSURL *url = [NSURL URLWithString:@"http://bot.whatismyipaddress.com"];
-    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
-    [req setTimeoutInterval:10];
-    
-    NSHTTPURLResponse *res = nil;
-    NSError *err = nil;
-    NSData *data = [NSURLConnection sendSynchronousRequest:req returningResponse:&res error:&err];
-    if (err) {
-        NSLog(@"%@", err);
-        return nil;
-    }
-    if (res.statusCode != 200) {
-        return nil;
-    }
-    NSString *ip = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    return ip;
-}
-
 - (NSString *)machineModel {
     static dispatch_once_t one;
     static NSString *model;

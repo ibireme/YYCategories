@@ -60,9 +60,6 @@
 /// Cell IP address of this device (can be nil). e.g. @"10.2.2.222"
 @property (nonatomic, readonly) NSString *ipAddressCell;
 
-/// External IP address of this device (can be nil). e.g. @"10.2.3.4"
-/// @warning This may post an HTTP request and block current thread, max timeout: 10 seconds.
-@property (nonatomic, readonly) NSString *ipAddressExternal;
 
 
 #pragma mark - Disk Space
