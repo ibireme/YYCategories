@@ -7,8 +7,8 @@ YYCategories <a href="#中文介绍">中文介绍</a>
 [![Cocoapods](http://img.shields.io/cocoapods/p/YYCategories.svg?style=flat)](http://cocoapods.org/?q=YYCategories)&nbsp;
 [![Support](https://img.shields.io/badge/support-iOS%206%2B%20-blue.svg?style=flat)](https://www.apple.com/nl/ios/)
 
-A set of useful categories for Foundation and UIKit.
-
+A set of useful categories for Foundation and UIKit.<br/>
+(It's a component of [YYKit](https://github.com/ibireme/YYKit))
 
 Documentation
 ==============
@@ -71,8 +71,8 @@ YYCategories is provided under the MIT license. See LICENSE file for details.
 ---
 中文介绍
 ==============
-YYCategories：功能丰富的 Category 类型工具库。
-
+功能丰富的 Category 类型工具库。<br/>
+(该项目是 [YYKit](https://github.com/ibireme/YYKit) 组件之一)
 
 文档
 ==============
