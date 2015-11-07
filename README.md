@@ -41,13 +41,13 @@ Installation
 2. Add the source files to your Xcode project.
 3. Add `-fno-objc-arc` compiler flag to `NSObject+YYAddForARC.m` and `NSThread+YYAdd.m`.
 4. Link with required frameworks:
-	* UIKit.framework
-	* CoreGraphics.framework
-	* QuartzCore.framework
-	* Accelerate.framework
-	* ImageIO.framework
-	* CoreText.framework
-	* CoreFoundation.framework
+	* UIKit
+	* CoreGraphics
+	* QuartzCore
+	* Accelerate
+	* ImageIO
+	* CoreText
+	* CoreFoundation
 	* libz
 5. Import `YYCategories.h`.
 
@@ -113,13 +113,13 @@ YYCategories is provided under the MIT license. See LICENSE file for details.
 2. 将 YYCategories 内的源文件添加(拖放)到你的工程。
 3. 为 `NSObject+YYAddForARC.m` 和 `NSThread+YYAdd.m` 添加编译参数 `-fno-objc-arc`。
 4. 链接以下 frameworks:
-	* UIKit.framework
-	* CoreGraphics.framework
-	* QuartzCore.framework
-	* Accelerate.framework
-	* ImageIO.framework
-	* CoreText.framework
-	* CoreFoundation.framework
+	* UIKit
+	* CoreGraphics
+	* QuartzCore
+	* Accelerate
+	* ImageIO
+	* CoreText
+	* CoreFoundation
 	* libz
 5. 导入 `YYCategories.h`。
 
