@@ -214,7 +214,7 @@
  
  @param originalSel   Selector 1.
  @param newSel        Selector 2.
- @return              YES if swizzling succeed; otherwize, NO.
+ @return              YES if swizzling succeed; otherwise, NO.
  */
 + (BOOL)swizzleInstanceMethod:(SEL)originalSel with:(SEL)newSel;
 
@@ -223,7 +223,7 @@
  
  @param originalSel   Selector 1.
  @param newSel        Selector 2.
- @return              YES if swizzling succeed; otherwize, NO.
+ @return              YES if swizzling succeed; otherwise, NO.
  */
 + (BOOL)swizzleClassMethod:(SEL)originalSel with:(SEL)newSel;
 
