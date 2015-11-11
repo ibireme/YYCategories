@@ -25,20 +25,23 @@ static NSString *const YYNSThreadAutoleasePoolStackKey = @"YYNSThreadAutoleasePo
 static inline void YYAutoreleasePoolPush() {
     NSMutableDictionary *dic =  [NSThread currentThread].threadDictionary;
     NSMutableArray *poolStack = dic[YYNSThreadAutoleasePoolStackKey];
+    
     if (!poolStack) {
-        poolStack = [NSMutableArray new];
+        CFArrayCallBacks callbacks = {0};
+        poolStack = (id)CFArrayCreateMutable(CFAllocatorGetDefault(), 0, &callbacks);
         dic[YYNSThreadAutoleasePoolStackKey] = poolStack;
-        [poolStack release];
+        CFRelease(poolStack);
     }
-    NSAutoreleasePool *pool = [NSAutoreleasePool new];
+    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
     [poolStack addObject:pool]; // push
-    [pool release];
 }
 
 static inline void YYAutoreleasePoolPop() {
     NSMutableDictionary *dic =  [NSThread currentThread].threadDictionary;
     NSMutableArray *poolStack = dic[YYNSThreadAutoleasePoolStackKey];
+    NSAutoreleasePool *pool = [poolStack lastObject];
     [poolStack removeLastObject]; // pop
+    [pool release];
 }
 
 static void YYRunLoopAutoreleasePoolObserverCallBack(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info) {
