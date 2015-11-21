@@ -51,6 +51,8 @@ Installation
 	* libz
 5. Import `YYCategories.h`.
 
+*  If you want to use it in App Extension, you may add `YY_TARGET_IS_EXTENSION` flag in `Build Settings` - `Preprocessor Macros` sections.
+
 
 Documentation
 ==============
@@ -66,7 +68,7 @@ This library requires a deployment target of iOS 6.0 or greater.
 About
 ==============
 I want to use the APIs as if it was provided by system, so I don't add prefix in
-these categories. if you just need some pieces of code
+these categories. This may cause some potential problems（such as conflict with other libraries), so if you just need some pieces of code
 in this project, pick them out and don't import the whole library.
 
 
@@ -123,6 +125,7 @@ YYCategories is provided under the MIT license. See LICENSE file for details.
 	* libz
 5. 导入 `YYCategories.h`。
 
+*  如果你需要在 App Extension 中使用这些代码, 可以在 `Build Settings` - `Preprocessor Macros` 中添加 `YY_TARGET_IS_EXTENSION` 参数。
 
 文档
 ==============
@@ -135,7 +138,7 @@ YYCategories is provided under the MIT license. See LICENSE file for details.
 
 关于
 ==============
-我希望调用 API 时，有着和调用系统自带 API 一样的体验，所以我并没有为 Category 方法添加前缀。我已经用工具扫描过这个项目中的 API，确保没有对系统 API 产生影响。我知道没有前缀的 Category 可能会带来麻烦，所以如果你只需要其中少量代码，那最好将代码拷贝出来，而不是导入整个库。
+我希望调用 API 时，有着和调用系统自带 API 一样的体验，所以我并没有为 Category 方法添加前缀。我已经用工具扫描过这个项目中的 API，确保没有对系统 API 产生影响。我知道没有前缀的 Category 可能会带来麻烦（比如可能和其他某些类库产生冲突），所以如果你只需要其中少量代码，那最好将那段代码取出来，而不是导入整个库。
 
 
 许可证
