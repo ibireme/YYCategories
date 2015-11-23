@@ -33,13 +33,11 @@ YYSYNTH_DUMMY_CLASS(UIScreen_YYAdd);
     return screenScale;
 }
 
+#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
 - (CGRect)currentBounds {
-#ifdef YY_TARGET_IS_EXTENSION
     return [self boundsForOrientation:[[UIApplication sharedApplication] statusBarOrientation]];
-#else
-    return CGRectZero;
-#endif
 }
+#endif
 
 - (CGRect)boundsForOrientation:(UIInterfaceOrientation)orientation {
     CGRect bounds = [self bounds];

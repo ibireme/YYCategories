@@ -51,8 +51,6 @@ Installation
 	* libz
 5. Import `YYCategories.h`.
 
-*  If you want to use it in App Extension, you may add `YY_TARGET_IS_EXTENSION` flag in `Build Settings` - `Preprocessor Macros` sections.
-
 
 Documentation
 ==============
@@ -125,7 +123,6 @@ YYCategories is provided under the MIT license. See LICENSE file for details.
 	* libz
 5. 导入 `YYCategories.h`。
 
-*  如果你需要在 App Extension 中使用这些代码, 可以在 `Build Settings` - `Preprocessor Macros` 中添加 `YY_TARGET_IS_EXTENSION` 参数。
 
 文档
 ==============
