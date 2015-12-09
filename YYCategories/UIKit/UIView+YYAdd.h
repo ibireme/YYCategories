@@ -98,7 +98,8 @@
  */
 - (CGRect)convertRect:(CGRect)rect fromViewOrWindow:(UIView *)view;
 
-
+@property (nonatomic) CGFloat x;           ///< Shortcut for frame.origin.x.
+@property (nonatomic) CGFloat y;           ///< Shortcut for frame.origin.y
 @property (nonatomic) CGFloat left;        ///< Shortcut for frame.origin.x.
 @property (nonatomic) CGFloat top;         ///< Shortcut for frame.origin.y
 @property (nonatomic) CGFloat right;       ///< Shortcut for frame.origin.x + frame.size.width
