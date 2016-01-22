@@ -1,4 +1,4 @@
-YYCategories <a href="#中文介绍">中文介绍</a>
+YYCategories
 ==============
 
 [![License MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://raw.githubusercontent.com/ibireme/YYCategories/master/LICENSE)&nbsp;
@@ -141,3 +141,5 @@ YYCategories is provided under the MIT license. See LICENSE file for details.
 许可证
 ==============
 YYCategories 使用 MIT 许可证，详情见 LICENSE 文件。
+
+
