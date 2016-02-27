@@ -18,10 +18,10 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 /// @discussion The function is same as UIGraphicsBeginImageContextWithOptions(),
 /// but it doesn't push the context to UIGraphic, so you can retain the context for reuse.
-CGContextRef YYCGContextCreateARGBBitmapContext(CGSize size, BOOL opaque, CGFloat scale);
+CGContextRef _Nullable YYCGContextCreateARGBBitmapContext(CGSize size, BOOL opaque, CGFloat scale);
 
 /// Create a `DeviceGray` Bitmap context. Returns NULL if an error occurs.
-CGContextRef YYCGContextCreateGrayBitmapContext(CGSize size, CGFloat scale);
+CGContextRef _Nullable YYCGContextCreateGrayBitmapContext(CGSize size, CGFloat scale);
 
 
 
