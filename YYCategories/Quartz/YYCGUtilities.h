@@ -12,6 +12,7 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
+NS_ASSUME_NONNULL_BEGIN
 
 /// Create an `ARGB` Bitmap context. Returns NULL if an error occurs.
 ///
@@ -325,3 +326,5 @@ static inline UIEdgeInsets UIEdgeInsetPixelCeil(UIEdgeInsets insets) {
 #ifndef kScreenHeight
 #define kScreenHeight YYScreenSize().height
 #endif
+
+NS_ASSUME_NONNULL_END

@@ -11,6 +11,8 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  Provides extensions for `UIDevice`.
  */
@@ -55,10 +57,10 @@
 ///=============================================================================
 
 /// WIFI IP address of this device (can be nil). e.g. @"192.168.1.111"
-@property (nonatomic, readonly) NSString *ipAddressWIFI;
+@property (nullable, nonatomic, readonly) NSString *ipAddressWIFI;
 
 /// Cell IP address of this device (can be nil). e.g. @"10.2.2.222"
-@property (nonatomic, readonly) NSString *ipAddressCell;
+@property (nullable, nonatomic, readonly) NSString *ipAddressCell;
 
 
 /**
@@ -162,10 +164,11 @@ typedef NS_OPTIONS(NSUInteger, YYNetworkTrafficType) {
 @property (nonatomic, readonly) float cpuUsage;
 
 /// Current CPU usage per processor (array of NSNumber), 1.0 means 100%. (nil when error occurs)
-@property (nonatomic, readonly) NSArray *cpuUsagePerProcessor;
+@property (nullable, nonatomic, readonly) NSArray<NSNumber *> *cpuUsagePerProcessor;
 
 @end
 
+NS_ASSUME_NONNULL_END
 
 #ifndef kSystemVersion
 #define kSystemVersion [UIDevice systemVersion]

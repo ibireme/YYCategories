@@ -11,6 +11,8 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  Provide some some common method for `NSDictionary`.
  */
@@ -27,7 +29,7 @@
  @param plist   A property list data whose root object is a dictionary.
  @return A new dictionary created from the plist data, or nil if an error occurs.
  */
-+ (NSDictionary *)dictionaryWithPlistData:(NSData *)plist;
++ (nullable NSDictionary *)dictionaryWithPlistData:(NSData *)plist;
 
 /**
  Creates and returns a dictionary from a specified property list xml string.
@@ -37,7 +39,7 @@
  
  @discussion Apple has implemented this method, but did not make it public.
  */
-+ (NSDictionary *)dictionaryWithPlistString:(NSString *)plist;
++ (nullable NSDictionary *)dictionaryWithPlistString:(NSString *)plist;
 
 /**
  Serialize the dictionary to a binary property list data.
@@ -46,14 +48,14 @@
  
  @discussion Apple has implemented this method, but did not make it public.
  */
-- (NSData *)plistData;
+- (nullable NSData *)plistData;
 
 /**
  Serialize the dictionary to a xml property list string.
  
  @return A plist xml string, or nil if an error occurs.
  */
-- (NSString *)plistString;
+- (nullable NSString *)plistString;
 
 /**
  Returns a new array containing the dictionary's keys sorted.
@@ -94,12 +96,12 @@
 /**
  Convert dictionary to json string. return nil if an error occurs.
  */
-- (NSString *)jsonStringEncoded;
+- (nullable NSString *)jsonStringEncoded;
 
 /**
  Convert dictionary to json string formatted. return nil if an error occurs.
  */
-- (NSString *)jsonPrettyStringEncoded;
+- (nullable NSString *)jsonPrettyStringEncoded;
 
 /**
  Try to parse an XML and wrap it into a dictionary.
@@ -111,7 +113,7 @@
  @param xmlDataOrString XML in NSData or NSString format.
  @return Return a new dictionary, or nil if an error occurs.
  */
-+ (NSDictionary *)dictionaryWithXML:(id)xmlDataOrString;
++ (nullable NSDictionary *)dictionaryWithXML:(id)xmlDataOrString;
 
 #pragma mark - Dictionary Value Getter
 ///=============================================================================
@@ -141,8 +143,8 @@
 - (NSInteger)integerValueForKey:(NSString *)key default:(NSInteger)def;
 - (NSUInteger)unsignedIntegerValueForKey:(NSString *)key default:(NSUInteger)def;
 
-- (NSNumber *)numverValueForKey:(NSString *)key default:(NSNumber *)def;
-- (NSString *)stringValueForKey:(NSString *)key default:(NSString *)def;
+- (nullable NSNumber *)numverValueForKey:(NSString *)key default:(nullable NSNumber *)def;
+- (nullable NSString *)stringValueForKey:(NSString *)key default:(nullable NSString *)def;
 
 @end
 
@@ -191,3 +193,5 @@
 - (NSDictionary *)popEntriesForKeys:(NSArray *)keys;
 
 @end
+
+NS_ASSUME_NONNULL_END

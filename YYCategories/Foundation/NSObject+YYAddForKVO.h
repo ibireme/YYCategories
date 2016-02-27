@@ -11,6 +11,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  Observer with block (KVO).
  */
@@ -28,7 +30,8 @@
  
  @param block   The block to register for KVO notifications.
  */
-- (void)addObserverBlockForKeyPath:(NSString*)keyPath block:(void (^)(__weak id obj, id oldVal, id newVal))block;
+- (void)addObserverBlockForKeyPath:(NSString*)keyPath
+                             block:(void (^)(__weak id _Nonnull obj, id _Nonnull oldVal, id _Nonnull newVal))block;
 
 /**
  Stops all blocks (associated by `addObserverBlockForKeyPath:block:`) from
@@ -47,3 +50,5 @@
 - (void)removeObserverBlocks;
 
 @end
+
+NS_ASSUME_NONNULL_END
