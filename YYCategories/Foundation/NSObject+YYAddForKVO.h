@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param block   The block to register for KVO notifications.
  */
 - (void)addObserverBlockForKeyPath:(NSString*)keyPath
-                             block:(void (^)(__weak id _Nonnull obj, id _Nonnull oldVal, id _Nonnull newVal))block;
+                             block:(void (^)(id _Nonnull obj, id _Nonnull oldVal, id _Nonnull newVal))block;
 
 /**
  Stops all blocks (associated by `addObserverBlockForKeyPath:block:`) from
