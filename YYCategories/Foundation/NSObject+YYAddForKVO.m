@@ -64,6 +64,22 @@ static const int block_key;
 @implementation NSObject (YYAddForKVO)
 
 - (void)addObserverBlockForKeyPath:(NSString *)keyPath block:(void (^)(__weak id obj, id oldVal, id newVal))block {
+    
+    [self addObserverWithKeyPath:keyPath options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:NULL block:block];
+}
+
+- (void)addObserverBlockForKeyPath:(NSString*)keyPath
+                           options:(NSKeyValueObservingOptions)options
+                           context:(nullable void *)context
+                             block:(void (^)(id _Nonnull obj, id _Nonnull oldVal, id _Nonnull newVal))block {
+    [self addObserverWithKeyPath:keyPath options:options context:context block:block];
+}
+
+- (void)addObserverWithKeyPath:(NSString *)keyPath
+                      options:(NSKeyValueObservingOptions)options
+                      context:(nullable void *)context
+                        block:(void (^)(__weak id obj, id oldVal, id newVal))block {
+    
     if (!keyPath || !block) return;
     _YYNSObjectKVOBlockTarget *target = [[_YYNSObjectKVOBlockTarget alloc] initWithBlock:block];
     NSMutableDictionary *dic = [self _yy_allNSObjectObserverBlocks];
@@ -73,7 +89,7 @@ static const int block_key;
         dic[keyPath] = arr;
     }
     [arr addObject:target];
-    [self addObserver:target forKeyPath:keyPath options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:NULL];
+    [self addObserver:target forKeyPath:keyPath options:options context:context];
 }
 
 - (void)removeObserverBlocksForKeyPath:(NSString *)keyPath {
