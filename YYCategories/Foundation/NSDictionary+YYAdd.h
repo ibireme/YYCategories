@@ -163,7 +163,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @discussion Apple has implemented this method, but did not make it public.
  */
-+ (NSMutableDictionary *)dictionaryWithPlistData:(NSData *)plist;
++ (nullable NSMutableDictionary *)dictionaryWithPlistData:(NSData *)plist;
 
 /**
  Creates and returns a dictionary from a specified property list xml string.
@@ -171,7 +171,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param plist   A property list xml string whose root object is a dictionary.
  @return A new dictionary created from the plist string, or nil if an error occurs.
  */
-+ (NSMutableDictionary *)dictionaryWithPlistString:(NSString *)plist;
++ (nullable NSMutableDictionary *)dictionaryWithPlistString:(NSString *)plist;
 
 
 /**
@@ -180,7 +180,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param aKey The key for which to return and remove the corresponding value.
  @return The value associated with aKey, or nil if no value is associated with aKey.
  */
-- (id)popObjectForKey:(id)aKey;
+- (nullable id)popObjectForKey:(id)aKey;
 
 /**
  Returns a new dictionary containing the entries for keys, and remove these
