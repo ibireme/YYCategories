@@ -34,6 +34,27 @@ NS_ASSUME_NONNULL_BEGIN
                              block:(void (^)(id _Nonnull obj, id _Nonnull oldVal, id _Nonnull newVal))block;
 
 /**
+ Registers a block to receive KVO notifications for the specified key-path
+ relative to the receiver.
+ 
+ @discussion The block and block captured objects are retained. Call
+ `removeObserverBlocksForKeyPath:` or `removeObserverBlocks` to release.
+ 
+ @param keyPath The key path, relative to the receiver, of the property to
+ observe. This value must not be nil.
+ 
+ @param options Options for use with -addObserverBlockForKeyPath:options:context:block:.
+ 
+ @param context When the same observer is registered for the same key path multiple times, with different context pointers each time.
+ 
+ @param block   The block to register for KVO notifications.
+ */
+- (void)addObserverBlockForKeyPath:(NSString*)keyPath
+                           options:(NSKeyValueObservingOptions)options
+                           context:(nullable void *)context
+                             block:(void (^)(id _Nonnull obj, id _Nonnull oldVal, id _Nonnull newVal))block;
+
+/**
  Stops all blocks (associated by `addObserverBlockForKeyPath:block:`) from
  receiving change notifications for the property specified by a given key-path 
  relative to the receiver, and release these blocks.
