@@ -107,7 +107,7 @@ NSString *YYUIViewContentModeToCAGravity(UIViewContentMode contentMode);
 
 
 /**
- Returns a rectangle to fit the @param rect with specified content mode.
+ Returns a rectangle to fit the param rect with specified content mode.
  
  @param rect The constrant rect
  @param size The content size
