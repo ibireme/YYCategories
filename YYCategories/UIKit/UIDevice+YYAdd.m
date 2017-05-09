@@ -252,7 +252,7 @@ static yy_net_interface_counter yy_get_net_interface_counter() {
             @"Watch2,3" : @"Apple Watch Series 2 38mm",
             @"Watch2,4" : @"Apple Watch Series 2 42mm",
             @"Watch2,6" : @"Apple Watch Series 1 38mm",
-            @"Watch1,7" : @"Apple Watch Series 1 42mm",
+            @"Watch2,7" : @"Apple Watch Series 1 42mm",
             
             @"iPod1,1" : @"iPod touch 1",
             @"iPod2,1" : @"iPod touch 2",
