@@ -177,8 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				D9D5846A1F055E6A00CBBB61 /* YYCategories */,
-				D9D584601F055E2200CBBB61 /* Products */,
 				D9D584EA1F055E9900CBBB61 /* Frameworks */,
+				D9D584601F055E2200CBBB61 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,11 +193,11 @@
 		D9D5846A1F055E6A00CBBB61 /* YYCategories */ = {
 			isa = PBXGroup;
 			children = (
-				D9D5846B1F055E6A00CBBB61 /* Foundation */,
-				D9D584881F055E6A00CBBB61 /* Quartz */,
-				D9D5848D1F055E6A00CBBB61 /* UIKit */,
 				D9D584AA1F055E6A00CBBB61 /* YYCategories.h */,
 				D9D584AB1F055E6A00CBBB61 /* YYCategoriesMacro.h */,
+				D9D5846B1F055E6A00CBBB61 /* Foundation */,
+				D9D5848D1F055E6A00CBBB61 /* UIKit */,
+				D9D584881F055E6A00CBBB61 /* Quartz */,
 			);
 			name = YYCategories;
 			path = ../YYCategories;
