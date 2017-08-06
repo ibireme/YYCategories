@@ -47,7 +47,7 @@ CGContextRef YYCGContextCreateGrayBitmapContext(CGSize size, CGFloat scale) {
     return context;
 }
 
-CGFloat YYScreenScale() {
+CGFloat YYScreenScale(void) {
     static CGFloat scale;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -56,7 +56,7 @@ CGFloat YYScreenScale() {
     return scale;
 }
 
-CGSize YYScreenSize() {
+CGSize YYScreenSize(void) {
     static CGSize size;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -103,7 +103,7 @@ static int matrix_invert(__CLPK_integer N, double *matrix) {
     return error;
 }
 
-CGAffineTransform YYCGAffineTransformGetFromPoints(CGPoint before[3], CGPoint after[3]) {
+CGAffineTransform YYCGAffineTransformGetFromPoints(CGPoint before[_Nullable 3], CGPoint after[_Nullable 3]) {
     if (before == NULL || after == NULL) return CGAffineTransformIdentity;
     
     CGPoint p1, p2, p3, q1, q2, q3;

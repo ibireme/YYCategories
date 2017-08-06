@@ -26,10 +26,10 @@ CGContextRef _Nullable YYCGContextCreateGrayBitmapContext(CGSize size, CGFloat s
 
 
 /// Get main screen's scale.
-CGFloat YYScreenScale();
+CGFloat YYScreenScale(void);
 
 /// Get main screen's size. Height is always larger than width.
-CGSize YYScreenSize();
+CGSize YYScreenSize(void);
 
 
 
@@ -80,7 +80,7 @@ static inline CGFloat CGAffineTransformGetTranslateY(CGAffineTransform transform
  
  @see http://stackoverflow.com/questions/13291796/calculate-values-for-a-cgaffinetransform-from-three-points-in-each-of-two-uiview
  */
-CGAffineTransform YYCGAffineTransformGetFromPoints(CGPoint before[3], CGPoint after[3]);
+CGAffineTransform YYCGAffineTransformGetFromPoints(CGPoint before[_Nullable 3], CGPoint after[_Nullable 3]);
 
 /// Get the transform which can converts a point from the coordinate system of a given view to another.
 CGAffineTransform YYCGAffineTransformGetFromViews(UIView *from, UIView *to);

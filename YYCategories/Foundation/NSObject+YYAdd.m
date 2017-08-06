@@ -49,14 +49,20 @@ va_end(args);
 }
 
 - (id)performSelectorWithArgsOnMainThread:(SEL)sel waitUntilDone:(BOOL)wait, ...{
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wvarargs"
     INIT_INV(wait, nil);
+#pragma clang diagnostic pop
     if (!wait) [inv retainArguments];
     [inv performSelectorOnMainThread:@selector(invoke) withObject:nil waitUntilDone:wait];
     return wait ? [NSObject getReturnFromInv:inv withSig:sig] : nil;
 }
 
 - (id)performSelectorWithArgs:(SEL)sel onThread:(NSThread *)thr waitUntilDone:(BOOL)wait, ...{
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wvarargs"
     INIT_INV(wait, nil);
+#pragma clang diagnostic pop
     if (!wait) [inv retainArguments];
     [inv performSelector:@selector(invoke) onThread:thr withObject:nil waitUntilDone:wait];
     return wait ? [NSObject getReturnFromInv:inv withSig:sig] : nil;

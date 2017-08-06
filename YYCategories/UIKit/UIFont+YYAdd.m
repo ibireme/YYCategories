@@ -181,7 +181,10 @@ static uint32_t CalcTableCheckSum(const uint32_t *table, uint32_t numberOfBytesI
     CFRetain(cgFont);
     
     CFArrayRef tags = CGFontCopyTableTags(cgFont);
-    if (!tags) return nil;
+    if (!tags) {
+        CFRelease(cgFont);
+        return nil;
+    }
     CFIndex tableCount = CFArrayGetCount(tags);
     
     size_t *tableSizes = malloc(sizeof(size_t) * tableCount);
