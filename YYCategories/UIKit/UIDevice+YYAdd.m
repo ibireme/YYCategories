@@ -284,6 +284,16 @@ static yy_net_interface_counter yy_get_net_interface_counter() {
             @"iPhone9,3" : @"iPhone 7",
             @"iPhone9,4" : @"iPhone 7 Plus",
             
+            @"iPhone10,1" : @"iPhone 8",
+            @"iPhone10,4" : @"iPhone 8",
+            @"iPhone10,2" : @"iPhone 8 Plus",
+            @"iPhone10,5" : @"iPhone 8 Plus",
+            @"iPhone10,3" : @"iPhone X",
+            @"iPhone10,6" : @"iPhone X",
+            @"iPhone11,8" : @"iPhone XR",
+            @"iPhone11,2" : @"iPhone XS",
+            @"iPhone11,6" : @"iPhone XS Max",
+            
             @"iPad1,1" : @"iPad 1",
             @"iPad2,1" : @"iPad 2 (WiFi)",
             @"iPad2,2" : @"iPad 2 (GSM)",
@@ -315,6 +325,15 @@ static yy_net_interface_counter yy_get_net_interface_counter() {
             @"iPad6,4" : @"iPad Pro (9.7 inch)",
             @"iPad6,7" : @"iPad Pro (12.9 inch)",
             @"iPad6,8" : @"iPad Pro (12.9 inch)",
+            
+            @"iPad6,11" : @"iPad (5th generation)",
+            @"iPad6,12" : @"iPad (5th generation)",
+            @"iPad7,1" : @"iPad Pro (12.9-inch, 2nd generation)",
+            @"iPad7,2" : @"iPad Pro (12.9-inch, 2nd generation)",
+            @"iPad7,3" : @"iPad Pro (10.5-inch)",
+            @"iPad7,4" : @"iPad Pro (10.5-inch)",
+            @"iPad7,5" : @"iPad (6th generation)",
+            @"iPad7,6" : @"iPad (6th generation)",
             
             @"AppleTV2,1" : @"Apple TV 2",
             @"AppleTV3,1" : @"Apple TV 3",
