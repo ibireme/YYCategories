@@ -123,11 +123,11 @@ YYSYNTH_DUMMY_CLASS(UIApplication_YYAdd)
 }
 
 - (int64_t)memoryUsage {
-    struct task_basic_info info;
-    mach_msg_type_number_t size = sizeof(info);
-    kern_return_t kern = task_info(mach_task_self(), TASK_BASIC_INFO, (task_info_t)&info, &size);
+    task_vm_info_data_t vmInfo;
+    mach_msg_type_number_t count = TASK_VM_INFO_COUNT;
+    kern_return_t kern = task_info(mach_task_self(), TASK_VM_INFO, (task_info_t)&vmInfo, &count);
     if (kern != KERN_SUCCESS) return -1;
-    return info.resident_size;
+    return vmInfo.phys_footprint;
 }
 
 - (float)cpuUsage {
