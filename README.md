@@ -14,7 +14,7 @@ A set of useful categories for Foundation and UIKit.<br/>
 Documentation
 ==============
 
-You can build and install docset use `Docset` scheme in Xcode, `appledoc` need to be pre-installed. 
+You can build and install docset use `Docset` scheme in Xcode, `appledoc` need to be pre-installed.
 Or your can read the [Documentation](http://github.ibireme.com/doc/YYCategories/index.html) online.
 
 
@@ -30,7 +30,7 @@ Installation
 
 ### Carthage
 
-1. Add `github "ibireme/YYCategories"` to your Cartfile.
+1. Add `github "YYKits/YYCategories"` to your Cartfile.
 2. Run `carthage update --platform ios` and add the framework to your project.
 3. Import \<YYCategories/YYCategories.h\>.
 
@@ -102,7 +102,7 @@ YYCategories is provided under the MIT license. See LICENSE file for details.
 
 ### Carthage
 
-1. 在 Cartfile 中添加 `github "ibireme/YYCategories"`。
+1. 在 Cartfile 中添加 `github "YYKits/YYCategories"`。
 2. 执行 `carthage update --platform ios` 并将生成的 framework 添加到你的工程。
 3. 导入 \<YYCategories/YYCategories.h\>。
 
