@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = 'YYCategories'
   s.summary      = 'A manager to get iOS keyboard views, frames and transform.'
-  s.version      = '1.1.0'
+  s.version      = '1.1.1'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.authors      = { 'ibireme' => 'ibireme@gmail.com' }
   s.social_media_url = 'http://blog.ibireme.com'
