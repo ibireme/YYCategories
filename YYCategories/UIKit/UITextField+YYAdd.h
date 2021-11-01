@@ -21,14 +21,17 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Set all text selected.
  */
-- (void)selectAllText;
+- (void)yy_selectAllText;
+
+/// 获取焦点的位置
+- (NSRange)yy_selectedRange;
 
 /**
  Set text in range selected.
  
  @param range  The range of selected text in a document.
  */
-- (void)setSelectedRange:(NSRange)range;
+- (void)yy_setSelectedRange:(NSRange)range;
 
 @end
 

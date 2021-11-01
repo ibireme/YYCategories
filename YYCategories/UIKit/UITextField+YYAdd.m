@@ -17,12 +17,23 @@ YYSYNTH_DUMMY_CLASS(UITextField_YYAdd)
 
 @implementation UITextField (YYAdd)
 
-- (void)selectAllText {
+- (void)yy_selectAllText {
     UITextRange *range = [self textRangeFromPosition:self.beginningOfDocument toPosition:self.endOfDocument];
     [self setSelectedTextRange:range];
 }
 
-- (void)setSelectedRange:(NSRange)range {
+- (NSRange)yy_selectedRange {
+    UITextPosition *beginning = self.beginningOfDocument;
+    UITextRange    *selectedRange = self.selectedTextRange;
+    UITextPosition *selectionStart = selectedRange.start;
+    UITextPosition *selectionEnd = selectedRange.end;
+    
+    const NSInteger location = [self offsetFromPosition:beginning toPosition:selectionStart];
+    const NSInteger length = [self offsetFromPosition:selectionStart toPosition:selectionEnd];
+    return NSMakeRange(location, length);
+}
+
+- (void)yy_setSelectedRange:(NSRange)range {
     UITextPosition *beginning = self.beginningOfDocument;
     UITextPosition *startPosition = [self positionFromPosition:beginning offset:range.location];
     UITextPosition *endPosition = [self positionFromPosition:beginning offset:NSMaxRange(range)];
